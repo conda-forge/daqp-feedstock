@@ -20,7 +20,7 @@ requirements:
     - python
     - setuptools
     - wheel
-    - cython
+    - cython <3
     - pip
   run:
     - python
