@@ -6,12 +6,12 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/daqp-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/daqp-{{ version }}.tar.gz
   sha256: baf8b25fe7cbdbb09da0783cb47479d2dcb2bc927ceffc15836766529d3c962f
 
 build:
   script: {{ PYTHON }} -m pip install . -vv
-  number: 0
+  number: 1
 
 requirements:
   build:
