@@ -1,5 +1,5 @@
 {% set name = "daqp" %}
-{% set version = "0.7.1" %}
+{% set version = "0.7.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/daqp-{{ version }}.tar.gz
-  sha256: 5390ab94c1914be8d087985695b9a6900fbe5a13071f33f823c3311bc417c8c6
+  sha256: 195855763331d6fc15d54b2354f91b0888e84cf43e1e9ee62f01cdce11f555e7
 
 build:
   script: {{ PYTHON }} -m pip install . -vv
