@@ -296,4 +296,5 @@ Feedstock Maintainers
 =====================
 
 * [@darnstrom](https://github.com/darnstrom/)
+* [@flferretti](https://github.com/flferretti/)
 
