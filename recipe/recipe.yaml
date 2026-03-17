@@ -1,0 +1,56 @@
+schema_version: 1
+
+context:
+  version: "0.7.2"
+
+package:
+  name: daqp
+  version: ${{ version }}
+
+source:
+  url: https://pypi.org/packages/source/d/daqp/daqp-${{ version }}.tar.gz
+  sha256: 195855763331d6fc15d54b2354f91b0888e84cf43e1e9ee62f01cdce11f555e7
+
+build:
+  number: 0
+  script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
+
+requirements:
+  build:
+    - if: build_platform != target_platform
+      then:
+        - python
+        - cross-python_${{ target_platform }}
+        - cython
+    - ${{ compiler('c') }}
+    - ${{ stdlib('c') }}
+  host:
+    - python
+    - cython
+    - setuptools
+    - pip
+  run:
+    - python
+    - numpy
+
+tests:
+  - python:
+      imports:
+        - daqp
+  - requirements:
+      run:
+        - pip
+        - python
+    script:
+      - pip check
+
+about:
+  summary: "DAQP: A dual active-set QP solver"
+  license: MIT
+  license_file: LICENSE
+  homepage: http://github.com/darnstrom/daqp
+
+extra:
+  recipe-maintainers:
+    - darnstrom
+    - flferretti
