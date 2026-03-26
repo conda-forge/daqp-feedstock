@@ -5,7 +5,7 @@
 
 [workspace]
 name = "daqp-feedstock"
-version = "3.57.0"  # conda-smithy version used to generate this file
+version = "3.58.0"  # conda-smithy version used to generate this file
 description = "Pixi configuration for conda-forge/daqp-feedstock"
 authors = ["@conda-forge/daqp"]
 channels = ["conda-forge"]
