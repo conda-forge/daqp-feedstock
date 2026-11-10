@@ -1,7 +1,7 @@
 schema_version: 1
 
 context:
-  version: "0.11.0"
+  version: "0.11.1"
 
 package:
   name: daqp
@@ -9,7 +9,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/d/daqp/daqp-${{ version }}.tar.gz
-  sha256: 2f27baf18d2acca14186498e651b34e0bed455627e777d3fd8ba655e7e40f920
+  sha256: e41eca2b83c405f34356f816c8d41b26ca05642b2bc09bfd6db84badc233a9cf
 
 build:
   number: 0
